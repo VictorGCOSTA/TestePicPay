@@ -34,7 +34,7 @@ Alternativamente, o projeto pode ser executado usando Docker Compose. O arquivo 
 docker compose up
 ```
 
-##API
+## API
 
 
 A aplicação expõe uma API REST que permite criar transações entre usuários. As transações são validadas antes de serem criadas, e se uma transação não for válida, a aplicação retornará um erro.
