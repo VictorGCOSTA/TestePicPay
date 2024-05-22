@@ -25,4 +25,13 @@ public class User {
     private BigDecimal balance;
     @Enumerated(EnumType.STRING)
     private UserType type;
+
+    public User(UserDTO user) {
+        this.firstName = user.firstname();
+        this.lastName = user.lastname();
+        this.document = user.document();
+        this.email = user.email();
+        this.balance = user.balance();
+        this.type = user.type();
+    }
 }

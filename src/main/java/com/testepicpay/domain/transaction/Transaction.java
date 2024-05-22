@@ -1,6 +1,7 @@
 package com.testepicpay.domain.transaction;
 
 import com.testepicpay.domain.user.User;
+import com.testepicpay.dtos.TransactionDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -9,6 +10,7 @@ import lombok.Setter;
 import lombok.Getter;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity(name = "transactions")
 @Table(name = "transactions")
@@ -28,4 +30,5 @@ public class Transaction {
     @ManyToOne
     @JoinColumn(name = "receiver_id")
     private User receiver;
+    private LocalDateTime timestamp;
 }
